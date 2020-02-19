@@ -712,6 +712,7 @@ c.Spawner.default_url = '/lab'
 #  Note that this does *not* prevent users from accessing files outside of this
 #  path! They can do so with many other means.
 # c.Spawner.notebook_dir = '~/jupyterlab'
+#c.Spawner.notebook_dir = '/'
 
 ## An HTML form for options a user can specify on launching their server.
 #  
@@ -782,6 +783,7 @@ c.Spawner.default_url = '/lab'
 #  
 #      c.Spawner.pre_spawn_hook = my_hook
 #c.Spawner.pre_spawn_hook = None
+"""
 start_dir = "jupyterlab"
 import os, pwd, grp
 def create_dir_hook(spawner):
@@ -798,6 +800,7 @@ def create_dir_hook(spawner):
         # now do whatever you think your user needs
         # ...
         pass
+"""
 
 # attach the hook function to the spawner
 #c.Spawner.pre_spawn_hook = create_dir_hook
