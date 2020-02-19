@@ -1,0 +1,14 @@
+[Unit]
+Description=Jupyterhub
+After=syslog.target network.target
+
+[Service]
+User=root
+WorkingDirectory=/srv/jupyterhub/
+Environment="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ExecStart=/usr/local/bin/jupyterhub --config=/srv/jupyterhub/jupyterhub_config.py
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
